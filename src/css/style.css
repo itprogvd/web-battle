@@ -3,7 +3,156 @@
   outline: none; }
 
 body {
-  font-family: 'Muli', sans-serif; }
+  font-family: 'Muli', sans-serif;
+  font-weight: normal;
+  font-size: 14px; }
 
 button {
   font-family: 'Nunito', sans-serif; }
+
+.container {
+  width: 85%;
+  max-width: 1100px;
+  margin: auto; }
+
+.button {
+  color: #ffffff;
+  background-color: #EC1F46;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 26px;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .button:hover {
+    background-color: #980d27; }
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px; }
+
+.descr {
+  margin: 0;
+  line-height: 160.6%;
+  color: #e6e6e6;
+  text-align: justify; }
+
+.contacts__wrap:not(:last-child) {
+  margin-bottom: 8px; }
+
+.contacts__explanation {
+  font-size: 12px;
+  color: #e6e6e6;
+  margin-left: 12px; }
+
+.old-price {
+  display: block;
+  color: #e6e6e6;
+  text-decoration-line: line-through; }
+
+.price {
+  font-weight: bold;
+  font-size: 24px; }
+  .price-wrap {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    justify-content: space-between; }
+
+.section-title {
+  margin: 41px 0 68px 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.cards-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(500px, auto);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-areas: "wide wide ."; }
+
+.card {
+  position: relative;
+  border-radius: 8px;
+  background-color: #0A223D;
+  color: #ffffff; }
+  .card::before {
+    content: 'Flash Offer';
+    position: absolute;
+    top: 27px;
+    left: 0;
+    padding: 8px 18px;
+    font-size: 12px;
+    background-color: #EC1F46;
+    color: #ffffff;
+    border-radius: 0px 4px 4px 0px; }
+  .card__info {
+    padding: 32px 21px 25px 35px; }
+  .card__title {
+    margin-bottom: 23px; }
+  .card__contacts {
+    margin-bottom: 24px; }
+    .card__contacts .contacts__wrap:not(:last-child) {
+      margin-bottom: 10px; }
+  .card__oll-price {
+    margin-bottom: 5px; }
+  .card--normal {
+    display: grid;
+    grid-template-rows: 1fr 1fr; }
+    .card--normal::before {
+      font-size: 8px;
+      padding: 4px 11px; }
+  .card--wide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: wide; }
+  .card-wide__info {
+    padding: 42px 21px 30px 48px; }
+  .card-wide__rating {
+    margin-bottom: 2px; }
+  .card-wide__title {
+    margin-bottom: 29px; }
+  .card-wide__descr {
+    margin-bottom: 46px; }
+  .card-wide__contacts {
+    margin-bottom: 33px; }
+  .card-wide__old-price {
+    margin-bottom: 7px; }
+  .card-wide__button {
+    margin-right: auto; }
+
+@media screen and (max-width: 1250px) {
+  .card__img {
+    width: 100%; }
+  .card--wide {
+    grid-template-columns: 1fr; }
+  .card-wide__img {
+    display: none; }
+  .cards-wrap {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-auto-rows: minmax(500px, auto);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-areas: "wide";
+    justify-content: center; } }
+
+@media screen and (max-width: 900px) {
+  .cards-wrap {
+    grid-template-columns: 380px; } }
+
+@media screen and (max-width: 450px) {
+  .card::before {
+    display: none; }
+  .card-wide__info {
+    padding: 20px 0; }
+  .card__info {
+    padding: 10px 0; }
+  .cards-wrap {
+    grid-template-columns: 300px; } }
